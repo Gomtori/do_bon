@@ -10,6 +10,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.3",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -37,6 +40,6 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": "next lint --max-warnings 0 --fix --file"
+    "*.{js,jsx,ts,tsx}": "eslint --max-warnings 0 --fix"
   }
 }

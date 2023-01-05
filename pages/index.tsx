@@ -1,7 +1,12 @@
-export default function Home() {
+import DynamicComponent from '../util/DynamicComponent'
+
+const Home = () => {
+  const SignIn = DynamicComponent(() => import('../modules/SignIn'))
   return (
     <>
-      <div> My Lovely Home </div>
+      <SignIn />
     </>
   )
 }
+
+export default Home
