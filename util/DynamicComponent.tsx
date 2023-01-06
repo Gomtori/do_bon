@@ -1,9 +1,9 @@
 import dynamic, { DynamicOptions, Loader } from 'next/dynamic'
-import { CircularProgress } from '@mui/material'
+import LoadingSpinner from '../components/LoadingSpinner'
 
 const DynamicComponent = (importedComponent: DynamicOptions | Loader) => {
   return dynamic(importedComponent, {
-    loading: () => <CircularProgress />,
+    loading: () => <LoadingSpinner />,
   })
 }
 
