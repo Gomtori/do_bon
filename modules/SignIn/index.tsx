@@ -1,5 +1,5 @@
-const LogIn = () => {
-  return <>LogIn</>
+const SignIn = () => {
+  return <>SignIn</>
 }
 
-export default LogIn
+export default SignIn
