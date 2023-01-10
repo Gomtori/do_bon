@@ -5,4 +5,5 @@ export const COLOR_SET = {
   background: '#FFEBB7',
   title: '#1A0000',
   content: '#1A120B',
+  input_content: '#787878',
 }
