@@ -2,14 +2,14 @@ import { css, keyframes } from '@emotion/react'
 
 const LoadingSpinner = () => {
   return (
-    <div css={spinner_wrapper}>
-      <span css={loading_text}>Loading</span>
+    <div css={spinnerWrapper}>
+      <span css={loadingText}>Loading</span>
       <div css={spinner} />
     </div>
   )
 }
 
-const spinner_wrapper = css({
+const spinnerWrapper = css({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -19,7 +19,7 @@ const spinner_wrapper = css({
   zIndex: 99999,
 })
 
-const loading_text = css({
+const loadingText = css({
   fontSize: 15,
   color: 'grey',
 })
