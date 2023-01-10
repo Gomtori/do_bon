@@ -14,5 +14,6 @@
         ]
     },
     "plugins": ["@typescript-eslint"],
+    "ignorePatterns": ["next.config.js"],
     "root": true
 }
