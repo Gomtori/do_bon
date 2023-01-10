@@ -20,18 +20,19 @@ const SignInBox = () => {
     password: yup.string().max(255).required('Required'),
   })
 
-  //로그인 데이터 전송로직 구현 필요
+  //TODO:: The logic of sending login data is needed and the alert should be removed
   const handleSignIn = (values: { email: string; password: string }) => {
-    return values
+    alert(`Hello, ${values.email}`)
+    throw new Error('SignIn Logic is absent')
   }
 
   const handleForgetPwdBtn = () => {
-    //비밀번호 찾기 페이지로 이동하는 주소로 변경 필요
+    //TODO:: The router should be changed into the finding pwd page
     void router.push('/')
   }
 
   const handleSignUpBtn = () => {
-    //회원가입 페이지로 이동하는 주소로 변경 필요
+    //TODO:: The router should be changed into the signup page
     void router.push('/')
   }
 
@@ -43,11 +44,12 @@ const SignInBox = () => {
           password: 'gomtori@',
         }}
         validationSchema={validationSchema}
-        //setSubmitting은 비동기 통신에 사용(isSubmitting을 통해 현재 비동기 통신중인지 확인)
-        //isSubmitting이 true일 때는 양식을 두 번 보내지 않도록 버튼을 disable 가능
+        //setSubmitting is used for the Ajax(you can check the status of Ajax)
+        //to prevent send the form again in the middle of Ajax progress,
+        //you can disable the button when 'isSubsetting' is true
         onSubmit={(values, { setSubmitting }) => {
           setSubmitting(true)
-          //로그인 데이터 전송
+          //send the login data
           handleSignIn(values)
           setSubmitting(false)
         }}
