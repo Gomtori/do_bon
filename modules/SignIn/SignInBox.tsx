@@ -61,13 +61,13 @@ const SignInBox = () => {
               placeholder="Email"
               name="email"
               label="email"
-              id="outlined-required"
+              id="outlined-email"
             />
             <TextInput
               placeholder="Password"
               name="password"
               label="password"
-              id="outlined-required"
+              id="outlined-password"
             />
             <div css={checkBox}>
               <input type="checkbox" id="remember_me" />
