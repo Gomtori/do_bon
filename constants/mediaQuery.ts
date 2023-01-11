@@ -1,5 +1,23 @@
-const breakpoints = [576, 768, 992, 1200]
+export enum mqTypes {
+  MOBILE = 'mobile',
+  TABLET = 'tablet',
+  LAPTOP = 'laptop',
+  DESKTOP = 'desktop',
+}
 
-const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`)
+const breakpoints = {
+  [mqTypes.MOBILE]: 576,
+  [mqTypes.TABLET]: 768,
+  [mqTypes.LAPTOP]: 992,
+  [mqTypes.DESKTOP]: 1200,
+}
+
+const fn = (v: number) => {
+  return `@media (min-width: ${v}px)`
+}
+
+const mq = Object.fromEntries(
+  Object.entries(breakpoints).map(([k, v]) => [k, fn(v)]),
+)
 
 export default mq

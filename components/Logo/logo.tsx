@@ -18,19 +18,19 @@ const logoBox = css`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  ${mq[0]} {
+  ${mq.mobile} {
     height: 56px;
   }
-  ${mq[1]} {
+  ${mq.tablet} {
     height: 70px;
   }
 `
 
 const logo = css`
-  ${mq[0]} {
+  ${mq.mobile} {
     height: 40px;
   }
-  ${mq[1]} {
+  ${mq.tablet} {
     height: 45px;
   }
 `
